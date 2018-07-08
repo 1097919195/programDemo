@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.price.RadioAvtivity">
+<LinearLayout
+    android:background="#c4bcbc"
+    android:id="@+id/ll_layout"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:layout_height="49dp">
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+       <RadioButton
+           android:id="@+id/radio1"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:button="@null"
+           android:text="个人信息"
+           android:textStyle="bold"
+           android:textColor="@color/text333"
+           android:gravity="center"
+           android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="充值记录"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textStyle="bold"
+            android:text="阈值设置"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+    </RadioGroup>
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

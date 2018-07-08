@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/view_list"/>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:text="生活助手"/>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            >
+            <RelativeLayout
+                android:id="@+id/wendu"
+                android:layout_width="150dp"
+                android:layout_height="100dp">
+                <RelativeLayout
+                    android:id="@+id/layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    >
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_centerInParent="true"
+                        android:textSize="60sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textSize="50sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="15dp"
+                        android:text="°"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/layout5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="今天:12-25℃"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/shuaxin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/wendu"
+                android:layout_marginLeft="50dp"
+                android:src="@mipmap/update"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@+id/shuaxin">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/linechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.github.mikephil.charting.charts.LineChart>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/layout2">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="今日生活指数"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textColor="#000"
+                android:layout_below="@id/tv1"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/tv2">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout3">
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="整点天气情况"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textColor="#000"
+                android:layout_below="@id/tv3"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_below="@+id/tv4"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.github.mikephil.charting.charts.BarChart>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#78edd0"
+    tools:context="com.example.asus.price.LoginActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="#757879"
+       android:layout_height="45dp">
+     <ImageView
+         android:id="@+id/iv_menu"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:src="@drawable/setting"
+         />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:text="用户登录"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:gravity="center"
+           android:drawableLeft="@drawable/setting"
+           android:text="网络设置"/>
+
+
+   </RelativeLayout>
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="45dp"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:textColorHint="@color/text333"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textColorHint="@color/text333"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/cb_RePsd"
+        android:layout_width="wrap_content"
+        android:text="记住密码"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/cb_autoLogin"
+        android:layout_width="wrap_content"
+        android:text="自动登录"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:text="登录"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:text="注册"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

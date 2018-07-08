@@ -1,0 +1,2 @@
+使用说明
+mpandroidchartlibrary-2-1-6.jar包是一个Android开源图表库MPAndroidChart的jar包,下载了mpandroidchartlibrary包即可使用后线图和饼图,支持选择、缩放和拖放。

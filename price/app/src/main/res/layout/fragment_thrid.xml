@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.price.fragment.ThridFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="25dp"
+      >
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_centerInParent="true"
+          android:orientation="vertical"
+          android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="当前小车账户余额告警阀值50元"
+              android:layout_margin="10dp"
+              />
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="当前小车账户余额告警阀元"
+                  android:layout_margin="10dp"
+                  />
+              <EditText
+                  android:layout_width="50dp"
+                  android:layout_height="wrap_content" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:text="元"
+                  android:layout_height="wrap_content" />
+          </LinearLayout>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="10dp"
+              android:text="设置"
+              android:background="#10000000"
+              android:layout_height="wrap_content" />
+      </LinearLayout>
+  </RelativeLayout>
+
+</FrameLayout>
