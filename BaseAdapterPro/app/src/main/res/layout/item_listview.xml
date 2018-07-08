@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="example.com.baseadapterpro.MainActivity">
+
+    <!--singleLine 单行显示-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android新技能"
+        android:singleLine="true"
+        android:textColor="#444"
+        android:textSize="16px"
+        />
+    <!--maxLines="2" 最大行数为2行-->
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android打造万能的适配器"
+        android:textColor="#898989"
+        android:textSize="16px"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:minLines="1"
+        android:maxLines="2"
+        />
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017.8.8"
+        android:textColor="#898989"
+        android:textSize="12px"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10086"
+        android:textColor="#898989"
+        android:textSize="16px"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="10dp"
+        android:background="#2ED667"
+        android:layout_alignParentRight="true"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="diandiandian"
+        android:textColor="#898989"
+        android:textSize="16px"
+        android:layout_below="@+id/time"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        />
+
+</RelativeLayout>

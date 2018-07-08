@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/tiaozhuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="界面跳转"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="broadcast"/>
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="start service"/>
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="stop service"/>
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="bind service"/>
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="unbind service"/>
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="cancel"/>
+                <Button
+                    android:id="@+id/media_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="media_player"/>
+                <Button
+                    android:id="@+id/looper"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="looper"/>
+
+                <TextView
+                    android:id="@+id/mStatusLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sadfsfsfdsaf"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/send_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="send_notification"/>
+
+                <Button
+                    android:id="@+id/send_notification_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="send_notification_service"/>
+
+                <Button
+                    android:id="@+id/foreground_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="foreground_service"/>
+
+                <Button
+                    android:id="@+id/broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="SDcard广播监听"/>
+            </LinearLayout>
+            <com.jaydenxiao.common.commonwidget.LoadingTip
+                android:id="@+id/loadedTip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </FrameLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

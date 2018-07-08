@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="example.com.aaaa">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.OtherActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <receiver android:name=".broadcast.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".broadcast.ShowNotificationReceiver">
+
+        </receiver>
+
+        <receiver android:name=".broadcast.NotificationReceiver">
+
+        </receiver>
+
+        <!--Myservice与MyserviceBind是跑在主线程的-->
+        <service android:name=".service.Myservice">
+
+        </service>
+
+        <service android:name=".service.MyserviceBind">
+
+        </service>
+
+        <service
+            android:name=".service.PushService"
+            android:process=":push"
+            android:exported="true"></service>
+
+        <service
+            android:name=".service.ForegroundService"
+            android:process=":foregroud">
+
+        </service>
+
+        <receiver android:name=".broadcast.SDCardBroadcastReciver"
+            android:priority="1000">
+            <intent-filter >
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                //SD卡处于可用状态，即挂载状态
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                //SD卡被拔出了，即处于移除状态
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                //SD卡插入了，但是没有挂载，不可用，即处于卸载状态
+                <!--想让上面的这3个事件生效,必须的加上这样的一个data,幸运的是需要加这个data的地方极少此处是一个-->
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
