@@ -1,5 +1,6 @@
 package example.com.okh_rxj_ret_all;
 
+import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -12,6 +13,12 @@ import retrofit2.http.Query;
 interface ApiService {
     @GET("/autoLogin")
     Call<LoginBean> getlogin(
+            @Query("username") String username,
+            @Query("password") String password
+    );
+
+    @GET("/autoLogin")
+    Observable<LoginBean> getloginWithObservable(
             @Query("username") String username,
             @Query("password") String password
     );

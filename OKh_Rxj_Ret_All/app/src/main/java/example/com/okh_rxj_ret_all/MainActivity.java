@@ -13,11 +13,15 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.observers.DisposableObserver;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv;
 
     Call<LoginBean> call;
+    Observable<LoginBean> observable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl(ApiContants.ADDRESS)
                         .addConverterFactory(GsonConverterFactory.create())
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//支持Observable，Call类型是DefaultCallAdapterFactory默认支持的
                         .build();
 
                 ApiService apiService = retrofit.create(ApiService.class);
                 call = apiService.getlogin(name,pwd);
+                //first
                 call.enqueue(new Callback<LoginBean>() {
                     @Override
                     public void onResponse(Call<LoginBean> call, Response<LoginBean> response) {
@@ -115,6 +122,27 @@ public class MainActivity extends AppCompatActivity {
 
 //                Response response = call.execute();
 //                res=response.body().string();
+
+                //second  (https://blog.csdn.net/vae260772/article/details/72967219)
+                observable = apiService.getloginWithObservable(name, pwd);
+                observable.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new DisposableObserver<LoginBean>() {
+                    @Override
+                    public void onNext(LoginBean value) {
+                        Log.e("TAG", "onNext With Observable");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });  // 网络请求切换在io线程中调用
 
 
             }
