@@ -222,10 +222,6 @@ public abstract class AppCrashLog implements Thread.UncaughtExceptionHandler {
 
             printWriter.close();
 
-            String result = writer.toString();
-
-            Log.e(TAG, "result:"+result);
-
             buffer.append("Exception:\n");
             buffer.append(""+writer.toString());
 
@@ -244,7 +240,7 @@ public abstract class AppCrashLog implements Thread.UncaughtExceptionHandler {
             /**
              * 日志文件名称
              */
-            String fileName = "crash-"+tm+"-"+timer+".log";
+            String fileName = "crash-"+tm+"-"+timer+".txt";
 
             exceptionWriterSd(CACHE_LOG, fileName,  buffer.toString());
 

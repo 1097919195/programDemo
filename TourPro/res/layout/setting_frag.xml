@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text=" 设置"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:background="@drawable/titlebar_whole"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        />
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_single_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 图片显示智能切换" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <com.example.tourpro.myview.SlideButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="    非WIFI模式下将自动切换到不显示图片模式"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#adadad"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_single_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 机票搜索默认包含联程" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <com.example.tourpro.myview.SlideButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 身边酒店距离" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 夜宵开卖提醒" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <com.example.tourpro.myview.SlideButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+       
+    </RelativeLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="    18点后可预订当前特价尾房,到时间了提醒我"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#adadad"
+        />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 清除地图缓存" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 清除历史记录" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\StudioProgram\\M1Test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "D:\\StudioProgram\\M1Test\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\LotusIsp\\SDKExample\\AndroidStudio\\M1Test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "D:\\LotusIsp\\SDKExample\\AndroidStudio\\M1Test\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    }
+]

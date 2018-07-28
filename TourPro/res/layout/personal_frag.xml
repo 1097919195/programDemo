@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text=" 个人中心"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        android:background="@drawable/titlebar_left_normal"
+        />
+        <Button 
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:drawableTop="@drawable/info_normal"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/titlebar_right_normal"
+        />
+    </RelativeLayout>
+    <LinearLayout 
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        >
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="    用户名:zjl7577"
+        android:textSize="18sp"
+        android:id="@+id/name"
+        android:gravity="center_vertical"
+        />
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="    电话号码:12345678910"
+        android:textSize="18sp"
+        android:id="@+id/phone"
+        android:gravity="center_vertical"
+        />
+    </LinearLayout>
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 常用乘机人" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 常用联系人" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 我的账号余额" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 代金券" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 修改密码" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 修改手机" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    <Button 
+        android:layout_margin="19dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="退出登录"
+        android:background="@drawable/logout_btn"
+        />
+</LinearLayout>

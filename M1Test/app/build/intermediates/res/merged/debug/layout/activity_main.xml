@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.highwillow.m1test.MainActivity">
+
+    <EditText
+        android:id="@+id/edtLog"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center_vertical|top"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btnClearLog">
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/imgIdPhoto"
+        android:layout_width="102dp"
+        android:layout_height="126dp"
+        android:layout_weight="0.37"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="ClearLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClearLog"
+        android:onClick="OnClearLogListener"
+        android:layout_alignTop="@+id/imgIdPhoto"
+        android:layout_alignRight="@+id/btnTestM1"
+        android:layout_alignEnd="@+id/btnTestM1" />
+
+    <Button
+        android:text="TestM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTestM1"
+        android:onClick="OnTestM1Listener"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnIdTest"
+        android:layout_alignEnd="@+id/btnIdTest"
+        android:layout_marginBottom="37dp"
+        android:layout_alignLeft="@+id/btnIdTest"
+        android:layout_alignStart="@+id/btnIdTest" />
+
+    <Button
+        android:text="OTG二代证"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIdTest"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

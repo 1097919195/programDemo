@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义属性的声明  创建-->
+    <declare-styleable name="HomeButton">
+        <attr name="isBig" format="boolean"></attr>
+        <attr name="bgcolor" format="integer"></attr>
+        <attr name="pic" format="integer"></attr>
+        <attr name="text" format="string"></attr>
+    </declare-styleable>
+</resources>

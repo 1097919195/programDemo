@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\StudioProgram\\M1Test\\app\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "D:\\StudioProgram\\M1Test\\app\\src\\main\\res\\xml\\device_filter.xml"
+    },
+    {
+        "merged": "D:\\LotusIsp\\SDKExample\\AndroidStudio\\M1Test\\app\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "D:\\LotusIsp\\SDKExample\\AndroidStudio\\M1Test\\app\\src\\main\\res\\xml\\device_filter.xml"
+    }
+]

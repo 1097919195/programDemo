@@ -191,7 +191,7 @@ public class CrashAppLog implements Thread.UncaughtExceptionHandler {
 
             String result = writer.toString();
 
-            Log.e(TAG, "result:"+result);
+            Log.e(TAG, "ewsult:"+result);
             buffer.append("\nException:\n");
             buffer.append(result);
             //当前时间戳

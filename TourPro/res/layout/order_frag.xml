@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text=" 我的订单"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:background="@drawable/titlebar_whole"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        />
+    <RelativeLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_first_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 机票订单" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+         <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 酒店订单" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 团购订单" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 送机订单" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_preference_last_normal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 门票订单" 
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <Button 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rightarrow_btn"
+            />
+       
+    </RelativeLayout>
+</LinearLayout>
