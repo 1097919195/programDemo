@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.swip)
     SwipeRefreshLayout swipe;
 
-    AudioUtils audioUtils=null;
+    AudioUtils audioUtils = null;
 
     @Bind(R.id.loadedTip)
     LoadingTip loadingTip;
@@ -82,8 +82,8 @@ public class MainActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
                 sendBroadcast(intent);
-                Log.e("adfasdf","111");
-                LogUtils.loge("adfasdf======"+222);
+                Log.e("adfasdf", "111");
+                LogUtils.loge("adfasdf======" + 222);
             }
         });
 
@@ -129,7 +129,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AppManager.getAppManager().AppExit(AppApplication.getAppContext(),true);
+                AppManager.getAppManager().AppExit(AppApplication.getAppContext(), true);
 
             }
         });
@@ -193,8 +193,8 @@ public class MainActivity extends BaseActivity {
 
                 Intent intent = new Intent(MainActivity.this, SDCardBroadcastReciver.class);
                 sendBroadcast(intent);
-                Log.e("adfasdf","333");
-                LogUtils.loge("adfasdf======"+444);
+                Log.e("adfasdf", "333");
+                LogUtils.loge("adfasdf======" + 444);
 
 
                 view.post(new Runnable() {
@@ -241,7 +241,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        audioUtils=new AudioUtils(MainActivity.this);
+        audioUtils = new AudioUtils(MainActivity.this);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -302,11 +302,10 @@ public class MainActivity extends BaseActivity {
     }
 
 
-
     @Override
     protected void onDestroy() {
         //返回3表示进程完全退出
-        LogUtils.loge("======="+ SystemUtils.getAppSatus(AppApplication.getAppContext(), "example.com.aaaa"));
+        LogUtils.loge("=======" + SystemUtils.getAppSatus(AppApplication.getAppContext(), "example.com.aaaa"));
         super.onDestroy();
     }
 }
