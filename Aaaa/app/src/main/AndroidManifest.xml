@@ -55,7 +55,6 @@
 
         <service
             android:name=".service.PushService"
-            android:process=":push"
             android:exported="true"></service>
 
         <service

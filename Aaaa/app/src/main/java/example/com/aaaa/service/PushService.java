@@ -5,9 +5,13 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
+
+import com.jaydenxiao.common.commonutils.LogUtils;
+import com.jaydenxiao.common.commonutils.ToastUtil;
 
 import example.com.aaaa.broadcast.ShowNotificationReceiver;
 
@@ -17,6 +21,8 @@ import example.com.aaaa.broadcast.ShowNotificationReceiver;
  */
 
 public class PushService extends Service{
+    AlarmManager am;
+    PendingIntent pendingIntent;
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -26,17 +32,17 @@ public class PushService extends Service{
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.i("PushService", "PushService onCreate");
+        LogUtils.loge( "PushService onCreate");
         //用AlarmManager定时发送广播
-        AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(this, ShowNotificationReceiver.class);
 
         //主要的区别在于Intent的执行立刻的，而pendingIntent的执行不是立刻的,它执行的操作实质上是参数传进来的Intent的操作
-        PendingIntent pendingIntent =
+        pendingIntent =
                 PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+2000, pendingIntent);
+
         //停止服务
 //        stopSelf();
 
@@ -45,6 +51,19 @@ public class PushService extends Service{
     // TODO 写这个里面试试
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        LogUtils.loge("PushService onStartCommand");
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ToastUtil.showShort("8.0以上通知需要渠道");
+        }else {
+            am.set(AlarmManager.RTC, System.currentTimeMillis()+2000, pendingIntent);
+        }
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LogUtils.loge( "PushService onDestroy");
     }
 }
